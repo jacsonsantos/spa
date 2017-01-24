@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router', 'angular-loading-bar']);
+var app = angular.module('app', ['ui.router', 'angular-loading-bar','ngStorage']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 	
@@ -11,8 +11,9 @@ app.config(function($stateProvider, $urlRouterProvider){
 
 	$urlRouterProvider.otherwise('/');
 })
-.config(function($httpProvider){
+.config(function($httpProvider, $localStorageProvider){
 	$httpProvider.defaults.headers.post["Content-Type"]   = "application/x-www-form-urlencoded";
 	$httpProvider.defaults.headers.put["Content-Type"]   = "application/x-www-form-urlencoded";
 	$httpProvider.defaults.headers.common["Content-Type"] = "application/x-www-form-urlencoded";
+	$httpProvider.defaults.headers.common["Authorization"] = 'Bearer '+ $localStorageProvider.get('access_token');
 });
