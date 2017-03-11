@@ -14,6 +14,8 @@ function AppCtrl($scope, $http, $state, $httpParamSerializerJQLike){
 	);
 
 	var data = {};
+	
+	data = $httpParamSerializerJQLike(data);
 
 	$http.post(uri + '/users', data).then(
 		function(d){
