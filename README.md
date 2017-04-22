@@ -1,2 +1,3 @@
-# first-process
-Base para qualquer aplicação web que vá consumir APIs
+﻿#COMP WEEK 2017
+##curso sobre open source
+###novas oportunindades :)
