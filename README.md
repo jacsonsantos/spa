@@ -1,3 +1,1 @@
-#COMP WEEK 2017
-##curso sobre open source
-###novas oportunindades :)
+SPA - Single Page Application
